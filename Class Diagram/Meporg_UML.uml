@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_P2N7YJFEEeu2Ot826OuFVQ" name="Meporg_UML">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_P6A2QJFEEeu2Ot826OuFVQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_VN7m8JFEEeu2Ot826OuFVQ" name="Entity" isAbstract="true">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_b1X1AJFEEeu2Ot826OuFVQ" name="Name">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_iiUOIJFEEeu2Ot826OuFVQ" name="AI">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_nK14cJFEEeu2Ot826OuFVQ" name="Attack Point">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_qzgoQJFEEeu2Ot826OuFVQ" name="Life Point">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Wt0P4JFFEeu2Ot826OuFVQ" name="Brain Point">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_babI8JFFEeu2Ot826OuFVQ" name="Strength Point">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_yezDgJFFEeu2Ot826OuFVQ" name="Sexe">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_NGQtsJFvEeuBV4kYV3U1PQ" name="Backpack" type="_EWzqQJFvEeuBV4kYV3U1PQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PLeGsJFvEeuBV4kYV3U1PQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PLmCgJFvEeuBV4kYV3U1PQ" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_YpKAIJuWEeutsKjzBIv0ug" name="Job" type="_qwpFAJFFEeu2Ot826OuFVQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b9QOIJuWEeutsKjzBIv0ug"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b9bNQJuWEeutsKjzBIv0ug" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_34wAMJFEEeu2Ot826OuFVQ" name="Demon" isAbstract="true">
+    <generalization xmi:type="uml:Generalization" xmi:id="_T9HNYJFGEeu2Ot826OuFVQ" general="_VN7m8JFEEeu2Ot826OuFVQ"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vCxzUJFrEeu2ssciUdbLVw" name="Hunt"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6BU2QJFEEeu2Ot826OuFVQ" name="Juge" isAbstract="true">
+    <generalization xmi:type="uml:Generalization" xmi:id="_Qbqf4JFGEeu2Ot826OuFVQ" general="_qwpFAJFFEeu2Ot826OuFVQ"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_5l6a4JFrEeu2ssciUdbLVw" name="Jail"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7DwjoJFEEeu2Ot826OuFVQ" name="Werewolf" isAbstract="true">
+    <generalization xmi:type="uml:Generalization" xmi:id="_wKuNAJuWEeutsKjzBIv0ug" general="_iwv7MJuWEeutsKjzBIv0ug"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_xMd94JuWEeutsKjzBIv0ug" general="_J0nI0JFFEeu2Ot826OuFVQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_AdAgQJFFEeu2Ot826OuFVQ" name="Builder" isAbstract="true">
+    <generalization xmi:type="uml:Generalization" xmi:id="_PXKV8JFGEeu2Ot826OuFVQ" general="_qwpFAJFFEeu2Ot826OuFVQ"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_4JNMUJFrEeu2ssciUdbLVw" name="Stronger"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_HGf8wJFFEeu2Ot826OuFVQ" name="Teacher" isAbstract="true">
+    <generalization xmi:type="uml:Generalization" xmi:id="_MFRucJFGEeu2Ot826OuFVQ" general="_qwpFAJFFEeu2Ot826OuFVQ"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_1z6I4JFrEeu2ssciUdbLVw" name="Knowledge"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_J0nI0JFFEeu2Ot826OuFVQ" name="Human" isAbstract="true">
+    <generalization xmi:type="uml:Generalization" xmi:id="_U2SREJFGEeu2Ot826OuFVQ" general="_VN7m8JFEEeu2Ot826OuFVQ"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_o7CZAJFrEeu2ssciUdbLVw" name="Punch"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_qwpFAJFFEeu2Ot826OuFVQ" name="Job" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-mU2AJFFEeu2Ot826OuFVQ" name="Hero">
+    <generalization xmi:type="uml:Generalization" xmi:id="_mcvxcJFGEeu2Ot826OuFVQ" general="_7DwjoJFEEeu2Ot826OuFVQ"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_ozfmYJFGEeu2Ot826OuFVQ" general="_J0nI0JFFEeu2Ot826OuFVQ"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_KceIUJFsEeu2ssciUdbLVw" general="_34wAMJFEEeu2Ot826OuFVQ"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_5KNQgJuWEeutsKjzBIv0ug" general="_iwv7MJuWEeutsKjzBIv0ug"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7emQQJFqEeu2ssciUdbLVw" name="Level">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__JU1kJFqEeu2ssciUdbLVw" name="Number_enemy">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JuT3QJFrEeu2ssciUdbLVw" name="Environnement">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_NcYrgJFrEeu2ssciUdbLVw" name="Value">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_AMtIsJFsEeu2ssciUdbLVw" name="Enemy">
+    <generalization xmi:type="uml:Generalization" xmi:id="_C2cyIJFsEeu2ssciUdbLVw" general="_J0nI0JFFEeu2Ot826OuFVQ"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_EBYUMJFsEeu2ssciUdbLVw" general="_34wAMJFEEeu2Ot826OuFVQ"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_FFTPUJFsEeu2ssciUdbLVw" general="_7DwjoJFEEeu2Ot826OuFVQ"/>
+    <generalization xmi:type="uml:Generalization" xmi:id="_1mQBkJuWEeutsKjzBIv0ug" general="_iwv7MJuWEeutsKjzBIv0ug"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_EWzqQJFvEeuBV4kYV3U1PQ" name="Item">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_I2KxgJFvEeuBV4kYV3U1PQ" name="Name" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TCWRoJFvEeuBV4kYV3U1PQ" name="Life Point">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Vf214JFvEeuBV4kYV3U1PQ" name="Attack Point">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZIDroJFvEeuBV4kYV3U1PQ" name="Brain Point">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_eK2QEJFvEeuBV4kYV3U1PQ" name="Strength Point">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_iwv7MJuWEeutsKjzBIv0ug" name="Wolf">
+    <generalization xmi:type="uml:Generalization" xmi:id="_rjm38JuWEeutsKjzBIv0ug" general="_VN7m8JFEEeu2Ot826OuFVQ"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_zk5ToJFrEeu2ssciUdbLVw" name="Scratch"/>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,236 @@
+{
+	"job" : {
+		"Teacher" : {
+			"bonus_attack_point" : 1,
+			"bonus_life_point" : 10,
+			"bonus_brain_point" : 10,
+			"bonus_strength_point" : 1}, 
+		"Worker" : {
+			"bonus_attack_point" : 10,
+			"bonus_life_point" : 30,
+			"bonus_brain_point" : 10,
+			"bonus_strength_point" : 1},
+		"Healer" : {
+			"bonus_attack_point" : 10,
+			"bonus_life_point" : 10,
+			"bonus_brain_point" : 10,
+			"bonus_strength_point" : 1}
+	},
+
+	"DEFAULT" : {
+		"Entity" : {
+			"default_life" : 10,
+			"default_attack" : 10,
+			"default_strength" : 1,
+			"default_brain" : 10
+		},
+		"Item" : {
+			"default_life" : 1,
+			"default_attack" : 1,
+			"default_strength" : 1,
+			"default_brain" : 1	
+		}
+	},
+
+	"typeHero" : {
+		"Demon" : {
+			"life_point" : 100,
+			"strength_point" : 10,
+			"attack_point" : 1000,
+			"brain_point" : 5
+		},
+		"Human" : {
+			"life_point" : 100,
+			"strength_point" : 10,
+			"attack_point" : 5,
+			"brain_point" : 10
+		},
+		"Wolf" : {
+			"life_point" : 25,
+			"strength_point" : 10,
+			"attack_point" : 5,
+			"brain_point" : 10
+		},
+		"Werewolf" : {
+			"life_point" : 200,
+			"strength_point" : 10,
+			"attack_point" :1,
+			"brain_point" : 10
+		}
+
+	},
+	
+	"typeEnemy" : {
+		"Demon" : {
+			"life_point" : 1000,
+			"strength_point" : 1,
+			"attack_point" : 10,
+			"brain_point" : 5
+		},
+		"Human" : {
+			"life_point" : 10,
+			"strength_point" : 1,
+			"attack_point" : 5,
+			"brain_point" : 10
+		},
+		"Wolf" : {
+			"life_point" : 25,
+			"strength_point" : 1,
+			"attack_point" : 5,
+			"brain_point" : 10
+		},
+		"Werewolf" : {
+			"life_point" : 20,
+			"strength_point" : 1,
+			"attack_point" :10,
+			"brain_point" : 10
+		}
+
+	},
+
+
+	"name_attacks" : {
+		"Demon" : {
+			"name_attack_1" : "Malédiction",
+			"name_attack_2" : "Ombre",
+			"name_attack_3" : "Hantise",
+			"name_attack_4" : "Exorcisme"
+		},
+		"Human" : {
+			"name_attack_1" : "Coup de main",
+			"name_attack_2" : "Coupe",
+			"name_attack_3" : "Frustration",
+			"name_attack_4" : "Hurlement"
+		},
+		"Wolf" : {
+			"name_attack_1" : "Griffure",
+			"name_attack_2" : "Crocs",
+			"name_attack_3" : "Charge",
+			"name_attack_4" : "Léchouille"
+		},
+		"Werewolf" : {
+			"name_attack_1" : "Faux charge",
+			"name_attack_2" : "Combo-Furie",
+			"name_attack_3" : "Damocles",
+			"name_attack_4" : "Dernier Recours"
+		}
+	},
+
+	"name_enemies" : [
+		"Margrett",
+		"Deloris",
+		"Lilla",
+		"Robt",
+		"Nadine",
+		"Janine",
+		"Fernande",
+		"Vickie",
+		"Danial",
+		"Florrie",
+		"So",
+		"Bee",
+		"Penelope",
+		"Arline",
+		"Anneliese",
+		"Natalia",
+		"Nellie",
+		"Otis",
+		"Olympia",
+		"Carolann",
+		"Aiko",
+		"Launa",
+		"Dede",
+		"Theresa",
+		"Lavina",
+		"Criselda",
+		"Teofila",
+		"Madelyn",
+		"Trudi",
+		"Felicia",
+		"Sharonda",
+		"Ardella",
+		"Trudy",
+		"Scot",
+		"Emilie",
+		"Fritz",
+		"Hoyt",
+		"Milda",
+		"Neely",
+		"Shanti",
+		"Regina",
+		"Eldridge",
+		"Toni",
+		"Glynda",
+		"Thomasena",
+		"Genesis",
+		"Lilli",
+		"Eldon",
+		"Shantelle",
+		"Wilbur"
+	],
+
+	"items" : {
+		"Cull" : {
+			"attack_point" : 5,
+			"life_point" : 3,
+			"brain_point" : 2,
+			"strength_point" : 2 
+		} ,
+		"Dark Seal" : {
+			"attack_point" : 2,
+			"life_point" : 3,
+			"brain_point" : 5,
+			"strength_point" : 2
+		},
+		"Doran's Blade" : {
+			"attack_point" : 8,
+			"life_point" : 3,
+			"brain_point" : 1,
+			"strength_point" : 3 
+		},
+		"Doran's Ring" : {
+			"attack_point" : 5,
+			"life_point" : 5,
+			"brain_point" : 5,
+			"strength_point" : 5 
+		},
+		"Doran's Shield" : {
+			"attack_point" : 2,
+			"life_point" : 8,
+			"brain_point" : 3,
+			"strength_point" : 5
+		},
+		"Emberknife" : {
+			"attack_point" : 6,
+			"life_point" : 4,
+			"brain_point" : 10,
+			"strength_point" : 2 
+		},
+		"Guardian's Blade" : {
+			"attack_point" : 7,
+			"life_point" : 4,
+			"brain_point" : 2,
+			"strength_point" : 3 
+		},
+		"Guardian's Hammer" : {
+			"attack_point" : 4,
+			"life_point" : 5,
+			"brain_point" : 2,
+			"strength_point" :9 
+		},
+		"Guardian's Horn" : {
+			"attack_point" : 4,
+			"life_point" : 7,
+			"brain_point" : 4,
+			"strength_point" : 4 
+		},
+		"Guardian's Orb" : {
+			"attack_point" : 3,
+			"life_point" : 4,
+			"brain_point" : 9,
+			"strength_point" : 3 
+		}
+	},
+
+	"highscore" : 0
+}

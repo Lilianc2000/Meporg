@@ -1,0 +1,9 @@
+Programmation/Meporg.pro.user
+Meporg.pro.user
+build-Meporg-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/
+build-Meporg-Desktop_Qt_5_15_2_MinGW_64_bit-Release/
+build-Meporg-QT5-Debug/
+*.ui
+.DS_STORE
+deploy/
+*.db
