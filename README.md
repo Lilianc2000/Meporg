@@ -8,7 +8,7 @@ Do your best !
 
 ### Download
 The game can be found in the relase of the git, or by clicking on this button :<br><br>
-[![Download](https://img.shields.io/github/v/release/lilianc2000/Meporg?color=green)]()
+[![Download](https://img.shields.io/github/v/release/lilianc2000/Meporg?color=green)](https://github.com/Lilianc2000/Meporg/releases/tag/v1.0)
 
 ### Build
 
