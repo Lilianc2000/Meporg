@@ -73,6 +73,11 @@ public:
 
     void operator+(Item new_item);
 
+    QString getEffectAttack1();
+    QString getEffectAttack2();
+    QString getEffectAttack3();
+    QString getEffectAttack4();
+
     virtual ~Entity() = default;
 
 

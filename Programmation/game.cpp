@@ -96,6 +96,4 @@ void Game::setHighScore(int new_highscore){
     file.open(QIODevice::WriteOnly);
     file.write(doc.toJson(QJsonDocument::Indented));
     file.close();
-
-
 };

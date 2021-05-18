@@ -36,7 +36,35 @@
 		"Demon" : {
 			"life_point" : 100,
 			"strength_point" : 10,
-			"attack_point" : 1000,
+			"attack_point" : 20,
+			"brain_point" : 5
+		},
+		"Human" : {
+			"life_point" : 100,
+			"strength_point" : 10,
+			"attack_point" : 10,
+			"brain_point" : 10
+		},
+		"Wolf" : {
+			"life_point" : 100,
+			"strength_point" : 10,
+			"attack_point" : 5,
+			"brain_point" : 10
+		},
+		"Werewolf" : {
+			"life_point" : 200,
+			"strength_point" : 10,
+			"attack_point" :10,
+			"brain_point" : 10
+		}
+
+	},
+	
+	"typeEnemy" : {
+		"Demon" : {
+			"life_point" : 100,
+			"strength_point" : 10,
+			"attack_point" : 10,
 			"brain_point" : 5
 		},
 		"Human" : {
@@ -46,7 +74,7 @@
 			"brain_point" : 10
 		},
 		"Wolf" : {
-			"life_point" : 25,
+			"life_point" : 100,
 			"strength_point" : 10,
 			"attack_point" : 5,
 			"brain_point" : 10
@@ -54,34 +82,6 @@
 		"Werewolf" : {
 			"life_point" : 200,
 			"strength_point" : 10,
-			"attack_point" :1,
-			"brain_point" : 10
-		}
-
-	},
-	
-	"typeEnemy" : {
-		"Demon" : {
-			"life_point" : 1000,
-			"strength_point" : 1,
-			"attack_point" : 10,
-			"brain_point" : 5
-		},
-		"Human" : {
-			"life_point" : 10,
-			"strength_point" : 1,
-			"attack_point" : 5,
-			"brain_point" : 10
-		},
-		"Wolf" : {
-			"life_point" : 25,
-			"strength_point" : 1,
-			"attack_point" : 5,
-			"brain_point" : 10
-		},
-		"Werewolf" : {
-			"life_point" : 20,
-			"strength_point" : 1,
 			"attack_point" :10,
 			"brain_point" : 10
 		}

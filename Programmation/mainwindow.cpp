@@ -116,10 +116,10 @@ void MainWindow::play(std::string type, std::string name, std::string job){
     Attack3->setText(hero->getNameAttack3());
     Attack4->setText(hero->getNameAttack4());
 
-    Attack1->setToolTip("This attack make the enemy loose x life");
-    Attack2->setToolTip("This attack make the enemy loose x life");
-    Attack3->setToolTip("This attack make the enemy loose x life");
-    Attack4->setToolTip("This attack make the enemy loose x life");
+    Attack1->setToolTip(hero->getEffectAttack1());
+    Attack2->setToolTip(hero->getEffectAttack2());
+    Attack3->setToolTip(hero->getEffectAttack3());
+    Attack4->setToolTip(hero->getEffectAttack4());
 
     connect(Attack1, &QPushButton::clicked, this, &MainWindow::attack1);
     connect(Attack2, &QPushButton::clicked, this, &MainWindow::attack2);
@@ -238,9 +238,10 @@ void MainWindow::attack_next_part(){
     else{
 
         auto [name_attack,dmg] = actual_ennemy->enemyAttack(*hero);
-        qDebug() << "Hero life before attack : " << hero->getLifePoint();
+        int initial_life = hero->getLifePoint();
         hero->setLifePoint(dmg);
-        qDebug() << "Hero life after attack : " << hero->getLifePoint();
+        int remaning_life = hero->getLifePoint();
+        Information->append("You loose " + QString::number(initial_life - remaning_life) + " hp");
         Information->append(QString::fromStdString(actual_ennemy->getName()) + " used " + name_attack);
         enemy_fight->play();
         enemyFight_animation->start();
@@ -305,10 +306,11 @@ void MainWindow::attack1(){
 
     qDebug() << "Attack 1 pressed";
     Information->append("You choose " + Attack1->text());
-    qDebug() << "Ennemy life points before attack : " << actual_ennemy->getLifePoint();
+    int initial_life = actual_ennemy->getLifePoint();
     actual_ennemy->setLifePoint(hero->attack1(*actual_ennemy));
     set_enemy_life();
-    qDebug() << "Ennemy life points after attack: " << actual_ennemy->getLifePoint();
+    int remaning_life = actual_ennemy->getLifePoint();
+    Information->append("Enemy loose " + QString::number(initial_life - remaning_life) + " hp");
 
 }
 
@@ -380,7 +382,7 @@ void MainWindow::version(){
 
     QMessageBox msg;
     msg.setWindowTitle("Version");
-    msg.setText("Release 1.0");
+    msg.setText("Release 1.01");
     msg.setIcon(QMessageBox::Information);
     msg.setStandardButtons(QMessageBox::Ok);
     msg.exec();

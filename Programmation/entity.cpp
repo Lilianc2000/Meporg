@@ -34,8 +34,13 @@ int Entity::attack1(Entity entity_attacked){
 };
 
 int Entity::attack2(Entity entity_attacked){
+    // We get the current lfie points of the enemy
     int entity_attacked_life = entity_attacked.getLifePoint();
+
+    // Conversion to float to get 30% of the life
     float temp_dmg = static_cast<float>(entity_attacked_life) * 0.3;
+
+    // Cast to int to return the new life of the enemy
     return entity_attacked_life - (int)temp_dmg;
 };
 
@@ -342,6 +347,23 @@ bool Entity::isDead(){
 void Entity::setDefaultLife(){
     this->setLifePoint(10);
 }
+
+
+QString Entity::getEffectAttack1(){
+    return QString("This attack does damages based on the attack and strength points of the attacker");
+};
+
+QString Entity::getEffectAttack2(){
+    return QString("This attack does 30% of the current life of the enemy");
+};
+
+QString Entity::getEffectAttack3(){
+    return QString("This attack increases the attack point of the attacker");
+};
+
+QString Entity::getEffectAttack4(){
+    return QString("This attack has a 1/10 chance to one shot the enemy");
+};
 
 // Overload de l'operateur +
 void Entity::operator+(Item new_item){
