@@ -1,14 +1,15 @@
 #include "item.h"
 
 Item::Item(){
+    // Reading the JSON File
      QJsonDocument doc = Reader::readDataJson();
 
+     // Get the list of the items
      QJsonObject items = doc["items"].toObject();
 
+     // Randomly select one of the items
      int int_name = std::rand() % items.length();
      QString key_name;
-
-
      // Find the key name of the Item of index "int_name"
      int i = 0;
      foreach(const QString& key, items.keys()) {
@@ -18,6 +19,7 @@ Item::Item(){
              i++;
          }
 
+     // Setup the stats of the items
     this->setAttackPoint(doc["items"][key_name]["attack_point"].toInt());
     this->setBrainPoint(doc["items"][key_name]["brain_point"].toInt());
     this->setLifePoint(doc["items"][key_name]["life_point"].toInt());
@@ -27,15 +29,8 @@ Item::Item(){
     this->setName(key_name.toUtf8().constData());
 }
 
-Item::Item(int dmg,int life, int brain, int strength){
-    this->setAttackPoint(dmg);
-    this->setBrainPoint(brain);
-    this->setLifePoint(life);
-    this->setStrengthPoint(strength);
-    this->setName("place_holder_item_name");
-};
 
-
+// Getters / Setters
 void Item::setName(std::string new_name){
     this->name = new_name;
 };
@@ -71,7 +66,6 @@ int Item::getLifePoint(){
 void Item::setLifePoint(int new_life_point){
     this->life_point = new_life_point;
 };
-
 
 std::string Item::getName(){
     return this->name;

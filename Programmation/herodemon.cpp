@@ -1,31 +1,13 @@
 #include "herodemon.h"
 
-HeroDemon::HeroDemon(std::string name,int life,int attack,int strength, int brain){
-    qDebug() << "[CPP] : Creating HeroDemon()";
-    this->setName(name);
-    this->setLifePoint(life);
-    this->setAttackPoint(attack);
-    this->setStrengthPoint(strength);
-    this->setBrainPoint(brain);
-
-    // Set AI
-    this->setAi(false);
-
-
-    // Set the type
-    this->setType(QString("Demon"));
-
-    Backpack *backpack = new Backpack();
-    this->setBackpack(*backpack);
-}
-
-
-
 HeroDemon::HeroDemon(std::string name,std::string job){
     qDebug() << "[CPP] : Creating HeroDemon()";
 
+    // Read the JSON File
     QJsonDocument doc = Reader::readDataJson();
 
+
+    // Setup the job
     Job* hero_job;
     if (job == "Teacher"){
         Job* test_job = new Job("Teacher");
@@ -41,10 +23,12 @@ HeroDemon::HeroDemon(std::string name,std::string job){
 
     } else {
         hero_job = NULL;
-        qDebug() << "Error dans l'argument de Game.createHero()";
+        //Game::generateErrorMessageBox(QString("FATAL ERROR : Error generating the job in HeroDemon"));
+        throw QString("FATAL ERROR : Error generating the job in HeroDemon");
     }
 
 
+    // Setup basic stats
     this->setAttackPoint(doc["typeHero"]["Demon"]["attack_point"].toInt());
     this->setLifePoint(doc["typeHero"]["Demon"]["life_point"].toInt());
     this->setBrainPoint(doc["typeHero"]["Demon"]["brain_point"].toInt());

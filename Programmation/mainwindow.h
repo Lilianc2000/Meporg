@@ -289,8 +289,8 @@ public:
         HighScore = new QLabel(centralwidget);
         QJsonDocument doc = Reader::readDataJson();
         HighScore->setText("High score : " + QString::number(doc["highscore"].toInt()));
-        int font4_point_size = 16;
-        HighScore->setGeometry(MainWindow->width() * 1.37, font4_point_size, HighScore->text().length() * font4_point_size, font4_point_size);
+        int font4_point_size = 22;
+        HighScore->setGeometry(MainWindow->width() * 1.3, font4_point_size, HighScore->text().length() * font4_point_size, font4_point_size);
         font4.setPointSize(font4_point_size);
         HighScore->setFont(font4);
 

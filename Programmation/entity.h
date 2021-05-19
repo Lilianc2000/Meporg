@@ -16,10 +16,10 @@ public:
     Entity(std::string name,int life,int attack,int strength, int brain);
     Entity(std::string name);
     Entity();
-    int attack1(Entity entity_attacked);
-    int attack2(Entity entity_attacked);
-    int attack3(Entity entity_attacked);
-    int attack4(Entity entity_attacked);
+    unsigned int attack1(Entity entity_attacked);
+    unsigned int attack2(Entity entity_attacked);
+    unsigned int attack3(Entity entity_attacked);
+    unsigned int attack4(Entity entity_attacked);
 
 
     //Getters/Setters
@@ -31,8 +31,8 @@ public:
 
     bool getSex();
 
-    int getAttackPoint();
-    void setAttackPoint(int new_attack_point);
+    unsigned int getAttackPoint();
+    void setAttackPoint(unsigned int new_attack_point);
 
     int getLifePoint();
     void setLifePoint(int new_life_point);
@@ -67,9 +67,9 @@ public:
     QString getNameAttack3();
     QString getNameAttack4();
 
-    std::tuple<QString,int> enemyAttack(Entity enemy_attacked);
+    std::tuple<QString,unsigned int> enemyAttack(Entity enemy_attacked);
 
-    void setDefaultLife();
+
 
     void operator+(Item new_item);
 

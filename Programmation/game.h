@@ -4,9 +4,11 @@
 #include <string>
 #include <list>
 #include <vector>
-#include <qDebug>
+#include <QDebug>
 
-#include "entity.h"
+#include <QMessageBox>
+
+
 #include "reader.h"
 
 #include "herodemon.h"
@@ -30,6 +32,9 @@ public:
 
     static int readHighScore();
     static void setHighScore(int new_highscore);
+    static void resetHighScore();
+
+    static void generateErrorMessageBox(QString error);
 
 };
 

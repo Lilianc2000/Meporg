@@ -1,5 +1,6 @@
 #include "infoitems.h"
 
+// Constructeur de la classe
 InfoItems::InfoItems(QWidget *parent)
     : QDialog(parent)
 {
@@ -7,6 +8,7 @@ InfoItems::InfoItems(QWidget *parent)
 
 }
 
+// Destructeur de la classe
 InfoItems::~InfoItems()
 {
     delete ui;

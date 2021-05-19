@@ -1,26 +1,37 @@
 #include "enemyhuman.h"
 
+
+
 EnemyHuman::EnemyHuman(){
-
-}
-
-EnemyHuman::EnemyHuman(QString type){
-    qDebug() << "[CPP] : Generating EnemyHuman() with argument" << type;
+    qDebug() << "[CPP] : Generating EnemyHuman()";
 
     this->setIsInitialized(false);
 
-    this->setType(type);
+    this->setType(QString("Human"));
+
     QJsonDocument doc = Reader::readDataJson();
 
-    Job* job = new Job("Teacher");
+    // Setup the job
+    int jobint = std::rand() % 2;
+    Job* job;
+    switch (jobint) {
+        case 0:
+            job = new Job("Teacher");
+            break;
+        case 1:
+            job = new Job("Worker");
+            break;
+        case 2:
+            job = new Job("Healer");
+            break;
+    }
     this->setJob(*job);
 
-    this->setLifePoint(doc["DEFAULT"]["Entity"]["default_life"].toInt());
-    this->setAttackPoint(doc["DEFAULT"]["Entity"]["default_attack"].toInt());
-    this->setBrainPoint(doc["DEFAULT"]["Entity"]["default_brain"].toInt());
-    this->setStrengthPoint(doc["DEFAULT"]["Entity"]["default_strength"].toInt());
-
-
+    // Setup the base stats of the Demon
+    this->setLifePoint(doc["typeEnemy"]["Human"]["life_point"].toInt());
+    this->setAttackPoint(doc["typeEnemy"]["Human"]["attack_point"].toInt());
+    this->setBrainPoint(doc["typeEnemy"]["Human"]["brain_point"].toInt());
+    this->setStrengthPoint(doc["typeEnemy"]["Human"]["strength_point"].toInt());
 
     // Set AI
     this->setAi(true);
@@ -29,24 +40,17 @@ EnemyHuman::EnemyHuman(QString type){
     Backpack *backpack = new Backpack();
     this->setBackpack(*backpack);
 
+    // Create base Item from the EnemyDemon
     Item *i = new Item();
     Item *i2 = new Item();
-    qDebug() << "CREATING ITEMs";
     this->addItem(*i);
     this->addItem(*i2);
 
+
     // Setup name
-    qDebug() << "READING NAME";
     int name = std::rand() % 49;
     QString ar =  doc["name_enemies"][name].toString();
     this->setName(ar.toUtf8().constData());
-
-
-
-    qDebug() << this->getLifePoint();
-    qDebug() << this->getAttackPoint();
-    qDebug() << this->getBrainPoint();
-    qDebug() << this->getStrengthPoint();
 
     this->setIsInitialized(true);
 }

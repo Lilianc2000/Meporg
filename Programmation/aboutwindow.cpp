@@ -1,5 +1,6 @@
 #include "aboutwindow.h"
 
+// Constructeur de la classe
 AboutWindow::AboutWindow(QWidget *parent)
     : QDialog(parent)
 {
@@ -8,6 +9,7 @@ AboutWindow::AboutWindow(QWidget *parent)
 
 }
 
+// Destructeur de la classe
 AboutWindow::~AboutWindow()
 {
     delete ui;

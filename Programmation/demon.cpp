@@ -1,7 +1,6 @@
 #include "demon.h"
 
-Demon::Demon(){
-}
+Demon::Demon(){}
 
 
 
