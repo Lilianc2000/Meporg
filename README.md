@@ -10,7 +10,7 @@ Tip 2 : a description of a capacity is show when the mouse is on a button
 
 ### Download
 The game can be found in the relase of the git, or by clicking on this button :<br><br>
-[![Download](https://img.shields.io/github/v/release/lilianc2000/Meporg?color=green)](https://github.com/Lilianc2000/Meporg/releases/tag/v1.01)
+[![Download](https://img.shields.io/github/v/release/lilianc2000/Meporg?color=green)](https://github.com/Lilianc2000/Meporg/releases/tag/v1.1)
 
 ### Build
 
