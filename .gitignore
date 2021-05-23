@@ -8,3 +8,4 @@ build-Meporg-QT5-Debug/
 deploy/
 *.db
 *.autosave
+build/

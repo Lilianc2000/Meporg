@@ -28,7 +28,6 @@ SOURCES += \
     infoitems.cpp \
     job.cpp \
     item.cpp \
-    level.cpp \
     main.cpp \
     mainwindow.cpp \
     reader.cpp \
@@ -54,7 +53,6 @@ HEADERS += \
     infoitems.h \
     job.h \
     item.h \
-    level.h \
     mainwindow.h \
     reader.h \
     werewolf.h \

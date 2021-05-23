@@ -17,7 +17,6 @@ Item Backpack::getItem(int index){
     if (index < this->getNumberItems()){
         return this->items[index];
     }
-    //Game::generateErrorMessageBox(QString("ERROR : Accessing an item out of range"));
     throw QString("ERRRO : Accessing an item out of range");
 };
 
