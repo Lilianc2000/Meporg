@@ -7,3 +7,4 @@ build-Meporg-QT5-Debug/
 .DS_STORE
 deploy/
 *.db
+*.autosave
